@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raksha Bandhan</title>
+    <style>
+      body {
+        background-color: #f58b8b;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        color: white;
+        overflow: hidden;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        color: black;
+        text-shadow: 0 0 10px yellow, 0 0 20px orange, 0 0 30px red;
+        margin-bottom: 10px;
+        animation: glowPulse 2s infinite alternate;
+      }
+
+      p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+      }
+
+      img {
+        width: 300px;
+        height: auto;
+        border-radius: 15px;
+        animation: zoomInOut 4s ease-in-out infinite;
+      }
+
+      @keyframes zoomInOut {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.2);
+        }
+      }
+
+      @keyframes glowPulse {
+        from {
+          text-shadow: 0 0 10px rgb(237, 108, 160), 0 0 20px rgb(255, 0, 162),
+            0 0 30px red;
+        }
+        to {
+          text-shadow: 0 0 20px rgb(114, 43, 88), 0 0 40px orange, 0 0 60px red;
+        }
+      }
+
+      .gift {
+        position: absolute;
+        font-size: 24px;
+        animation: fall 5s linear infinite;
+      }
+
+      @keyframes fall {
+        0% {
+          transform: translateY(-50px);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(100vh);
+          opacity: 0;
+        }
+      }
+
+      button {
+        background-color: rgb(255, 204, 0);
+        border: none;
+        padding: 10px 20px;
+        font-size: 14px;
+        font-weight: bold;
+        border-radius: 25px;
+        cursor: pointer;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+        margin-top: 20px;
+      }
+
+      button:hover {
+        background-color: rgb(255, 153, 0);
+        transform: scale(1.05);
+      }
+
+      .sent {
+        background-color: #4caf50 !important;
+        color: white;
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Happy Raksha Bandhan ❤️</h1>
+
+    <br />
+    <p><b>"भाई-बहन का रिश्ता, दिल से जुड़ा होता है।" </b></p>
+    <br />
+    <img src="rakhi2.jpg" alt="Raksha Bandhan" />
+
+    <div class="gift" style="left: 10%">🎁</div>
+    <div class="gift" style="left: 30%; animation-delay: 0.5s">🍬</div>
+    <div class="gift" style="left: 50%; animation-delay: 1s">🎀</div>
+    <div class="gift" style="left: 70%; animation-delay: 1.5s">🍫</div>
+    <div class="gift" style="left: 90%; animation-delay: 2s">🎁</div>
+    <br /><br /><br /><br />
+
+    <button id="wishBtn">Happy Raksha Bandhan to You</button>
+
+    <script>
+      document.getElementById("wishBtn").addEventListener("click", function () {
+        this.textContent = "sent";
+        this.classList.add("!sent");
+        this.disabled = true;
+      });
+    </script>
+  </body>
+</html>
