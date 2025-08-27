@@ -16,6 +16,6 @@ Celebrate the special bond of siblings with this interactive Raksha Bandhan card
 - Interactive "Send!" button
 
 ## Tech Stack
-HTML | CSS | JavaScript | Netlify
+HTML | CSS | JavaScript | Netlify | Vs code
 
 
